@@ -1,4 +1,4 @@
-mod library;
+pub mod library;
 
 fn function_1() {
     let shelf = library::bookshelf::Bookshelf::new();

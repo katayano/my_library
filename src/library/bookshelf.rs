@@ -46,7 +46,7 @@ impl Bookshelf {
     }
 
     // 本を本棚から取り出すメソッド
-    pub fn remobe_book(&mut self, book: &Book) -> Option<Book> {
+    pub fn remove_book(&mut self, book: &Book) -> Option<Book> {
         todo!("Implemented");
     }
 

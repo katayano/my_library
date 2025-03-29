@@ -16,8 +16,19 @@ impl Bookshelf {
     }
 
     // タイトルで本を検索するメソッド
-    pub fn search_books(&self, title_query: &str) -> &Vec<Book> {
-        todo!("Implementend");
+    pub fn search_books_exact(&self, title_query: &str) -> Vec<&Book> {
+        self.books
+            .iter()
+            .filter(|book| book.title == title_query)
+            .collect()
+    }
+
+    // タイトル名の部分一致で本を検索するメソッド
+    pub fn search_books_partial(&self, title_query: &str) -> Vec<&Book> {
+        self.books
+            .iter()
+            .filter(|book| book.title.contains(title_query))
+            .collect()
     }
 
     // 本を本棚から取り出すメソッド
